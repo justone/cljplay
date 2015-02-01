@@ -6,4 +6,5 @@ pom.xml.asc
 *.jar
 *.class
 /.lein-*
+/.gorilla-port
 /.nrepl-port
