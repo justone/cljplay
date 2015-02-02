@@ -29,10 +29,10 @@
 ;; **
 
 ;; @@
-(= true true)
-(= true nil)
-(= false false)
+[(= true true)
+ (= true nil)
+ (= false false)]
 ;; @@
 ;; =>
-;;; {"type":"html","content":"<span class='clj-unkown'>true</span>","value":"true"}
+;;; {"type":"list-like","open":"<span class='clj-vector'>[</span>","close":"<span class='clj-vector'>]</span>","separator":" ","items":[{"type":"html","content":"<span class='clj-unkown'>true</span>","value":"true"},{"type":"html","content":"<span class='clj-unkown'>false</span>","value":"false"},{"type":"html","content":"<span class='clj-unkown'>true</span>","value":"true"}],"value":"[true false true]"}
 ;; <=
