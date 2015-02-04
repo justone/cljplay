@@ -21,3 +21,4 @@ The online viewer can also be used.  I'll try to update this file with links to 
 
 * [ws/d01_starting_off.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d01_starting_off.clj)
 * [ws/d02_repl_helpers.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d02_repl_helpers.clj)
+* [ws/d03_little_math.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d03_little_math.clj)
