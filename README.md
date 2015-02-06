@@ -24,3 +24,4 @@ The online viewer can also be used.  I'll try to update this file with links to 
 * [ws/d03_little_math.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d03_little_math.clj)
 * [ws/d04_more_little_math.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d04_more_little_math.clj)
 * [ws/d05_maps.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d05_maps.clj)
+* [ws/d06_pretty_print.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d06_pretty_print.clj)
