@@ -1,13 +1,9 @@
 ;; gorilla-repl.fileformat = 1
 
 ;; **
-;;; # Gorilla REPL
+;;; # Macros
 ;;; 
-;;; Welcome to gorilla :-)
-;;; 
-;;; Shift + enter evaluates code. Hit ctrl+g twice in quick succession or click the menu icon (upper-right corner) for more commands ...
-;;; 
-;;; It's a good habit to run each worksheet in its own namespace: feel free to use the declaration we've provided below if you'd like.
+;;; Today, it's macros.  I'd like a macro that I can use to run several examples in a Gorilla REPL session and it will show the results next to each block of code.
 ;; **
 
 ;; @@
