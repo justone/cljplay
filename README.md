@@ -26,3 +26,4 @@ The online viewer can also be used.  I'll try to update this file with links to 
 * [ws/d05_maps.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d05_maps.clj)
 * [ws/d06_pretty_print.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d06_pretty_print.clj)
 * [ws/d07_macros.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d07_macros.clj)
+* [ws/d08_maps2.clj](http://viewer.gorilla-repl.org/view.html?source=github&user=justone&repo=cljplay&path=ws/d08_maps2.clj)
