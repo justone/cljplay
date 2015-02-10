@@ -1,13 +1,18 @@
 (ns cljplay.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.pprint :refer [pprint]]))
 
 (defmacro show-example
   [code]
-  `(println (str "> " (quote ~code) "\n" (eval ~code))))
+  `(do
+     (println (str "> " (quote ~code)))
+     (pprint (eval ~code))))
 
 (defmacro show-sub-example
   [code]
-  `(println (str "> " ~code "\n" (eval ~code))))
+  `(do
+     (println (str "> " ~code))
+     (pprint (eval ~code))))
 
 (defmacro show-examples
   [& rest]

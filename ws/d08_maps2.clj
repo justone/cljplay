@@ -51,11 +51,31 @@
 ;; @@
 ;; ->
 ;;; &gt; (assoc-in bob [:last-name] &quot;Jones&quot;)
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Jones&quot;, :age 44, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Jones&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; &gt; (assoc-in bob [:address :zip] &quot;91029&quot;)
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;, :zip &quot;91029&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address
+;;;  {:street1 &quot;123 Anystreet&quot;,
+;;;   :city &quot;Anytown&quot;,
+;;;   :state &quot;CA&quot;,
+;;;   :zip &quot;91029&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; &gt; (assoc-in bob [:prefs :browser] &quot;Firefox&quot;)
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}, :prefs {:browser &quot;Firefox&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;},
+;;;  :prefs {:browser &quot;Firefox&quot;}}
 ;;; 
 ;; <-
 ;; =>
@@ -73,9 +93,23 @@
 ;; @@
 ;; ->
 ;;; &gt; (assoc-in bob [:children 2] {:name &quot;Jimmy&quot;, :age 0})
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;} {:age 0, :name &quot;Jimmy&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children
+;;;  [{:age 10, :name &quot;Anna&quot;}
+;;;   {:age 6, :name &quot;Zach&quot;}
+;;;   {:age 0, :name &quot;Jimmy&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; &gt; (assoc-in bob [:friends 0] {:name &quot;Jerry&quot;})
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}, :friends {0 {:name &quot;Jerry&quot;}}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;},
+;;;  :friends {0 {:name &quot;Jerry&quot;}}}
 ;;; 
 ;; <-
 ;; =>
@@ -90,16 +124,30 @@
 (show-examples
   (update-in bob [:first-name] upper-case)
   (update-in bob [:age] inc)
-  (update-in bob [:children 0 :age] inc)
-  )
+  (update-in bob [:children 0 :age] inc))
 ;; @@
 ;; ->
 ;;; &gt; (update-in bob [:first-name] upper-case)
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;BOB&quot;, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;BOB&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; &gt; (update-in bob [:age] inc)
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 45, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 45,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; &gt; (update-in bob [:children 0 :age] inc)
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 11, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;Bob&quot;, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 11, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; 
 ;; <-
 ;; =>
@@ -136,15 +184,19 @@
 ;; @@
 ;; ->
 ;;; &gt; (dissoc-in bob [:first-name])
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :jobs {:main &quot;Barrista&quot;}}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :jobs {:main &quot;Barrista&quot;}}
 ;;; &gt; (dissoc-in bob [:jobs :main])
-;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;}, :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}], :last-name &quot;Smith&quot;, :age 44, :first-name &quot;Bob&quot;}
+;;; {:address {:street1 &quot;123 Anystreet&quot;, :city &quot;Anytown&quot;, :state &quot;CA&quot;},
+;;;  :children [{:age 10, :name &quot;Anna&quot;} {:age 6, :name &quot;Zach&quot;}],
+;;;  :last-name &quot;Smith&quot;,
+;;;  :age 44,
+;;;  :first-name &quot;Bob&quot;}
 ;;; 
 ;; <-
 ;; =>
 ;;; {"type":"html","content":"<span class='clj-nil'>nil</span>","value":"nil"}
 ;; <=
-
-;; @@
-
-;; @@
